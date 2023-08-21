@@ -7,8 +7,9 @@ from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.vectorstores import FAISS
 import tempfile
 import pandas as pd
+import os
 
-keys_secret = st.secrets["keys"]
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
     placeholder="openai_keyyyy",
@@ -29,7 +30,7 @@ data = pd.read_csv(csv_file_path)
 texts = data.astype(str).agg(" ".join, axis=1).tolist()
 
 # Set up OpenAI embeddings
-embeddings = OpenAIEmbeddings(openai_api_key=keys_secret)
+embeddings = OpenAIEmbeddings()
 
 # Create vectorstore using FAISS from text data
 vectorstore = FAISS.from_texts(texts, embeddings)
