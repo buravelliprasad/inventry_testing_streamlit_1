@@ -10,7 +10,7 @@ import pandas as pd
 
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
-    placeholder="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",
+    placeholder="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",
     type="password")
 st.image("socialai.jpg")
 # Path to the CSV file
@@ -26,7 +26,7 @@ data = pd.read_csv(csv_file_path)
 texts = data.astype(str).agg(" ".join, axis=1).tolist()
 
 # Set up OpenAI embeddings
-embeddings = OpenAIEmbeddings(openai_api_key="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")
+embeddings = OpenAIEmbeddings(openai_api_key="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")
 
 # Create vectorstore using FAISS from text data
 vectorstore = FAISS.from_texts(texts, embeddings)
