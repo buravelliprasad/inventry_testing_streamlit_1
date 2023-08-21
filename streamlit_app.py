@@ -14,7 +14,7 @@ user_api_key = st.sidebar.text_input(
     type="password")
 st.image("socialai.jpg")
 # Path to the CSV file
-csv_file_path = r"C:\Users\Prasad\Desktop\Streamlit_ai\dealer_1_inventry.csv"
+csv_file_path = r"dealer_1_inventry.csv"
 
 # Display the introductory information
 st.info("Introducing Engage.ai, your cutting-edge partner in streamlining dealership and customer-related operations. At Engage, we specialize in harnessing the power of automation to revolutionize the way dealerships and customers interact. Our advanced solutions seamlessly handle tasks, from managing inventory and customer inquiries to optimizing sales processes, all while enhancing customer satisfaction. Discover a new era of efficiency and convenience with us as your trusted automation ally. [engane.ai](https://funnelai.com/). For this demo application, we will use the Inventory Dataset. Please explore it [here](https://github.com/ShahVishs/workflow/blob/main/2013_Inventory.csv) to get a sense for what questions you can ask.")
