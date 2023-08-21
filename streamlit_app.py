@@ -8,6 +8,7 @@ from langchain.vectorstores import FAISS
 import tempfile
 import pandas as pd
 import os
+pip install faiss-cpu
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
