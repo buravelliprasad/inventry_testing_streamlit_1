@@ -10,11 +10,12 @@ import pandas as pd
 
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
-    placeholder="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",
+    placeholder="sk-djAanolAT",
     type="password")
 st.image("socialai.jpg")
 # Path to the CSV file
 csv_file_path = r"dealer_1_inventry.csv"
+openaiapi_key = st.secrets["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"]
 
 # Display the introductory information
 st.info("Introducing Engage.ai, your cutting-edge partner in streamlining dealership and customer-related operations. At Engage, we specialize in harnessing the power of automation to revolutionize the way dealerships and customers interact. Our advanced solutions seamlessly handle tasks, from managing inventory and customer inquiries to optimizing sales processes, all while enhancing customer satisfaction. Discover a new era of efficiency and convenience with us as your trusted automation ally. [engane.ai](https://funnelai.com/). For this demo application, we will use the Inventory Dataset. Please explore it [here](https://github.com/buravelliprasad/inventry_testing_streamlit_1/blob/main/dealer_1_inventry.csv) to get a sense for what questions you can ask.")
@@ -26,7 +27,7 @@ data = pd.read_csv(csv_file_path)
 texts = data.astype(str).agg(" ".join, axis=1).tolist()
 
 # Set up OpenAI embeddings
-embeddings = OpenAIEmbeddings(openai_api_key="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")
+embeddings = OpenAIEmbeddings(openai_api_key=openaiapi_key)
 
 # Create vectorstore using FAISS from text data
 vectorstore = FAISS.from_texts(texts, embeddings)
