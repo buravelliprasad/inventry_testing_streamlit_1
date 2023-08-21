@@ -5,3 +5,4 @@ tiktoken
 pandas
 tabulate
 streamlit_chat
+faiss-cpu
