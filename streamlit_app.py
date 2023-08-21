@@ -10,7 +10,7 @@ import pandas as pd
 
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
-    placeholder="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",
+    placeholder="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",
     type="password")
 st.image("socialai.jpg")
 # Path to the CSV file
