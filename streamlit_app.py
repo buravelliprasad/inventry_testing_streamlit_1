@@ -8,7 +8,7 @@ from langchain.vectorstores import FAISS
 import tempfile
 import pandas as pd
 import os
-
+OPENAI_API_KEY
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
@@ -17,7 +17,7 @@ user_api_key = st.sidebar.text_input(
 st.image("socialai.jpg")
 # Path to the CSV file
 csv_file_path = r"dealer_1_inventry.csv"
-openaiapi_key = st.secrets.openai_key
+# openaiapi_key = st.secrets.openai_key
 # my_db.connect(username=st.secrets.db_credentials.username, password=st.secrets.db_credentials.password)
 
 # Display the introductory information
