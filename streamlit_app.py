@@ -29,7 +29,7 @@ data = pd.read_csv(csv_file_path)
 texts = data.astype(str).agg(" ".join, axis=1).tolist()
 
 # Set up OpenAI embeddings
-embeddings = OpenAIEmbeddings(openai_api_key=st.secrets.key)
+embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["key"])
 
 # Create vectorstore using FAISS from text data
 vectorstore = FAISS.from_texts(texts, embeddings)
