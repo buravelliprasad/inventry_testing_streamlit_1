@@ -9,10 +9,10 @@ import tempfile
 import pandas as pd
 import os
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
-user_api_key = st.sidebar.text_input(
-    label="#### Your OpenAI API key 👇",
-    placeholder="openai_keyyyy",
-    type="password")
+# user_api_key = st.sidebar.text_input(
+#     label="#### Your OpenAI API key 👇",
+#     placeholder="openai_keyyyy",
+#     type="password")
 st.image("socialai.jpg")
 # Path to the CSV file
 csv_file_path = r"dealer_1_inventry.csv"
